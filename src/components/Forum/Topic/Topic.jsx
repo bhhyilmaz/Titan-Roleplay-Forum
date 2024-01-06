@@ -33,12 +33,12 @@ function Topic() {
 
     try {
       // Post topicIdParam to the endpoint
-      axios.post("https://express-server-hara.onrender.com/comments/", { topicIdParam }).then(res => {
+      axios.post("3.79.244.125:3001/comments/", { topicIdParam }).then(res => {
         setComments(() => res.data.comments);
       });
 
       // Get Topics
-      axios.get('https://express-server-hara.onrender.com/topic/' + topicIdParam)
+      axios.get('3.79.244.125:3001/topic/' + topicIdParam)
         .then(res => {
           setAuthor(res.data.Author);
           setTitle(res.data.Title);
@@ -65,7 +65,7 @@ function Topic() {
 
     try {
       // Post for create new topic
-      await axios.post('https://express-server-hara.onrender.com/topic/comment/new', {
+      await axios.post('3.79.244.125:3001/topic/comment/new', {
         comment,
         topicParam
       }).then(res => {
