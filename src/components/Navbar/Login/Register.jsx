@@ -20,7 +20,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post('3.79.244.125:3001/user/register', {
+      await axios.post('http://3.79.244.125:3001/user/register', {
         username,
         password,
         email

@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    await axios.post('3.79.244.125:3001/user/login', {
+    await axios.post('http://3.79.244.125:3001/user/login', {
       username,
       password
     }).then(res => {

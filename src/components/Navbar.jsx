@@ -13,7 +13,7 @@ function Navbar() {
   const [username, setUsername] = useState(String);
 
   useEffect(() => {
-    axios.get('3.79.244.125:3001/users').then(res => {
+    axios.get('http://3.79.244.125:3001/users').then(res => {
       setSession(res.data.Session);
       setUsername(res.data.Username);
     });
@@ -22,7 +22,7 @@ function Navbar() {
   useEffect(() => {
     if (logout) {
       try {
-        axios.post('3.79.244.125:3001/user/logout', { logout });
+        axios.post('http://3.79.244.125:3001/user/logout', { logout });
         navigate('/');
         window.location.reload(true);
       } catch (error) {
