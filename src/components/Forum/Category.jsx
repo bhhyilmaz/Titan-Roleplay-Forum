@@ -19,7 +19,7 @@ function Category() {
 
   const fetchCat = () => {
     try {
-      axios.get('http://3.79.244.125:3001/cat/' + catParam)
+      axios.get('http://3.79.244.125:3001/cat/' + catParam + '/')
         .then(res => {
           // Prevent an unknown cat param with this value
           setNoCat(() => res.data.noCat);
@@ -30,7 +30,7 @@ function Category() {
         });
 
       // Getting session info
-      axios.get('http://3.79.244.125:3001/users').then(res => {
+      axios.get('http://3.79.244.125:3001/users/').then(res => {
         setIsSession(() => res.data.Session);
       });
     } catch (error) {

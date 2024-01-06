@@ -38,7 +38,7 @@ function Topic() {
       });
 
       // Get Topics
-      axios.get('http://3.79.244.125:3001/topic/' + topicIdParam)
+      axios.get('http://3.79.244.125:3001/topic/' + topicIdParam + '/')
         .then(res => {
           setAuthor(res.data.Author);
           setTitle(res.data.Title);
@@ -65,7 +65,7 @@ function Topic() {
 
     try {
       // Post for create new topic
-      await axios.post('http://3.79.244.125:3001/topic/comment/new', {
+      await axios.post('http://3.79.244.125:3001/topic/comment/new/', {
         comment,
         topicParam
       }).then(res => {
