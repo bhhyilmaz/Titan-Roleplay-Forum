@@ -25,7 +25,7 @@ mongoDb();
 
 // Options
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN,
+  origin: true,
   methods: ['GET', 'POST'],
   credentials: true
 };
