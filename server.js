@@ -34,8 +34,11 @@ const sessionOptions = {
   resave: true,
   saveUninitialized: true,
   cookie: {
-    maxAge: 30 * 24 * 60 * 60 * 1000
-  }
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    secure: true,
+  },
+  // For that express-session cookies not beign saved in Chrome
+  proxy: true
 };
 
 // Middlewares
@@ -43,8 +46,6 @@ app.use(session(sessionOptions));
 app.use(cors(corsOptions));
 app.use(rateLimit);
 app.use(express.json());
-// For that express-session cookies not beign saved in Chrome
-app.set('trust proxy', 1)
 
 // Routers
 app.use(userRegister);
