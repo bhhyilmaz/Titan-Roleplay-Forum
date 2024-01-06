@@ -24,7 +24,7 @@ function Settings() {
   // Get user info
   useEffect(() => {
     try {
-      axios.get('http://localhost:3001/users')
+      axios.get('https://express-server-hara.onrender.com/users')
         .then(res => {
           setResPfp(() => res.data.Pfp);
           setResEmail(() => res.data.Email);
@@ -40,7 +40,7 @@ function Settings() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/user/edit', {
+      await axios.post('https://express-server-hara.onrender.com/user/edit', {
         email,
         password,
         pfp

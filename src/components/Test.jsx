@@ -14,7 +14,7 @@ function Test() {
 
   useEffect(() => {
     try {
-      axios.get('http://localhost:3001/users')
+      axios.get('https://express-server-hara.onrender.com/users')
         .then((res) => {
           setUsername(res.data.Username);
         })

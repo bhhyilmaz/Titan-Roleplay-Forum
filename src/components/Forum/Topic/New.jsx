@@ -19,7 +19,7 @@ function NewTopic() {
 
   const checkCat = () => {
     try {
-      axios.get("http://localhost:3001/cat/" + cat).then(res => {
+      axios.get("https://express-server-hara.onrender.com/cat/" + cat).then(res => {
         setNoCat(() => res.data.noCat);
       });
     } catch (error) {
@@ -36,7 +36,7 @@ function NewTopic() {
 
     try {
       // Post for create new topic
-      await axios.post('http://localhost:3001/topic/new', {
+      await axios.post('https://express-server-hara.onrender.com/topic/new', {
         cat,
         title,
         content

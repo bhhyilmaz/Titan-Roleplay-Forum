@@ -22,7 +22,7 @@ function Profile() {
 
   // Axios
   try {
-    axios.get('http://localhost:3001/user/' + usernameParam)
+    axios.get('https://express-server-hara.onrender.com/user/' + usernameParam)
       .then(res => {
         setUsername(res.data.Username);
         setDate(res.data.date);

@@ -20,7 +20,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/user/register', {
+      await axios.post('https://express-server-hara.onrender.com/user/register', {
         username,
         password,
         email
