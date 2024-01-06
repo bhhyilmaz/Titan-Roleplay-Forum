@@ -35,10 +35,12 @@ const sessionOptions = {
   saveUninitialized: true,
   cookie: {
     maxAge: 30 * 24 * 60 * 60 * 1000,
+    // For that express-session cookies not beign saved in Chrome
     secure: true,
+    sameSite: 'none'
   },
-  // For that express-session cookies not beign saved in Chrome
   proxy: true
+  //
 };
 
 // Middlewares
