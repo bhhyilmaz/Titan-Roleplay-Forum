@@ -43,6 +43,8 @@ app.use(session(sessionOptions));
 app.use(cors(corsOptions));
 app.use(rateLimit);
 app.use(express.json());
+// For that express-session cookies not beign saved in Chrome
+app.set('trust proxy', 1)
 
 // Routers
 app.use(userRegister);
