@@ -8,7 +8,7 @@ const NotFound = () => {
   useEffect(() => {
     setTimeout(() => {
       setDelay(() => true);
-    }, 250);
+    }, 1000);
   }, []);
 
   return (
