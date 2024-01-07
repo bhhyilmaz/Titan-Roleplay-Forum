@@ -19,7 +19,7 @@ function NewTopic() {
 
   const checkCat = () => {
     try {
-      axios.get("https://3.79.244.125:3001/cat/" + cat + '/').then(res => {
+      axios.get("https://server.blaineyilmaz.tech/cat/" + cat + '/').then(res => {
         setNoCat(() => res.data.noCat);
       });
     } catch (error) {
@@ -36,7 +36,7 @@ function NewTopic() {
 
     try {
       // Post for create new topic
-      await axios.post('https://3.79.244.125:3001/topic/new/', {
+      await axios.post('https://server.blaineyilmaz.tech/topic/new/', {
         cat,
         title,
         content

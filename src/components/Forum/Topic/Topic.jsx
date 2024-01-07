@@ -33,12 +33,12 @@ function Topic() {
 
     try {
       // Post topicIdParam to the endpoint
-      axios.post("https://3.79.244.125:3001/comments/", { topicIdParam }).then(res => {
+      axios.post("https://server.blaineyilmaz.tech/comments/", { topicIdParam }).then(res => {
         setComments(() => res.data.comments);
       });
 
       // Get Topics
-      axios.get('https://3.79.244.125:3001/topic/' + topicIdParam + '/')
+      axios.get('https://server.blaineyilmaz.tech/topic/' + topicIdParam + '/')
         .then(res => {
           setAuthor(res.data.Author);
           setTitle(res.data.Title);
@@ -65,7 +65,7 @@ function Topic() {
 
     try {
       // Post for create new topic
-      await axios.post('https://3.79.244.125:3001/topic/comment/new/', {
+      await axios.post('https://server.blaineyilmaz.tech/topic/comment/new/', {
         comment,
         topicParam
       }).then(res => {

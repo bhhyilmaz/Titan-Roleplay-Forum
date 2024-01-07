@@ -24,7 +24,7 @@ function Settings() {
   // Get user info
   useEffect(() => {
     try {
-      axios.get('https://3.79.244.125:3001/users/')
+      axios.get('https://server.blaineyilmaz.tech/users/')
         .then(res => {
           setResPfp(() => res.data.Pfp);
           setResEmail(() => res.data.Email);
@@ -40,7 +40,7 @@ function Settings() {
     e.preventDefault();
 
     try {
-      await axios.post('https://3.79.244.125:3001/user/edit/', {
+      await axios.post('https://server.blaineyilmaz.tech/user/edit/', {
         email,
         password,
         pfp
